@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成都画册设计公司_成都品牌设计_成都包装设计_成都VI设计_成都LOGO设计_成都网站设计_成都UI设计_成都广告设计_成都宣传册设计_成都标识标牌_成都广告制作 - 红舟设计工作室</title>
+    <meta name="keywords" content="成都画册设计公司,成都品牌设计,成都包装设计,成都VI设计,成都LOGO设计,成都网站设计,成都UI设计,成都广告设计,成都宣传册设计,成都标识标牌,成都广告制作">
+    <meta name="description" content="红舟设计工作室是成都舜王科技有限公司旗下专业设计服务团队，专注于品牌策划、画册包装设计、宣传会展、网站电商UI设计等领域，为客户提供专业的设计解决方案。">
+    <style>
+        :root {
+            --primary-color: #e74c3c;
+            --secondary-color: #2c3e50;
+            --accent-color: #3498db;
+            --light-color: #f9f9f9;
+            --dark-color: #333;
+            --text-color: #555;
+            --border-radius: 4px;
+            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* 导航栏样式 */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--dark-color);
+        }
+        
+        /* Banner样式 */
+        .banner {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .banner-slides {
+            height: 100%;
+            position: relative;
+        }
+        
+        .banner-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .banner-slide.active {
+            opacity: 1;
+        }
+        
+        .banner-controls {
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            z-index: 10;
+        }
+        
+        .banner-prev, .banner-next {
+            background: rgba(255, 255, 255, 0.7);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: var(--transition);
+            opacity: 0;
+        }
+        
+        .banner:hover .banner-prev,
+        .banner:hover .banner-next {
+            opacity: 1;
+        }
+        
+        .banner-prev:hover, .banner-next:hover {
+            background: rgba(255, 255, 255, 0.9);
+        }
+        
+        /* 企业简介样式 */
+        .about {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 0 auto;
+        }
+        
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        .about-features {
+            flex: 1;
+            min-width: 300px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .feature-item {
+            background: white;
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .feature-icon {
+            font-size: 40px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .feature-item h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+        
+        /* 服务范围样式 */
+        .services {
+            padding: 80px 0;
+        }
+        
+        .service-item {
+            height: 737px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+        
+        .service-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+            width: 100%;
+        }
+        
+        .service-text {
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .service-text.right {
+            margin-left: auto;
+        }
+        
+        .service-text h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+        
+        .service-text p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .service-list {
+            list-style: none;
+        }
+        
+        .service-list li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .service-list li::before {
+            content: '+';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .service-text.dark {
+            color: var(--dark-color);
+        }
+        
+        .service-text.dark h3 {
+            color: var(--dark-color);
+        }
+        
+        /* 成功案例样式 */
+        .portfolio {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .portfolio-item {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .portfolio-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+        }
+        
+        /* 合作伙伴样式 */
+        .partners {
+            padding: 80px 0;
+        }
+        
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 30px;
+        }
+        
+        .partner-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            background: white;
+        }
+        
+        .partner-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            filter: drop-shadow(0 0 10px rgba(231, 76, 60, 0.5));
+        }
+        
+        .partner-logo {
+            max-width: 100%;
+            max-height: 60px;
+            object-fit: contain;
+        }
+        
+        /* 新闻资讯样式 */
+        .news {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+        
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .news-item {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .news-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .news-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .news-content {
+            padding: 20px;
+        }
+        
+        .news-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .news-meta {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 10px;
+        }
+        
+        /* 企业文化样式 */
+        .culture {
+            padding: 80px 0;
+        }
+        
+        .culture-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .culture-item {
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            background: white;
+        }
+        
+        .culture-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .culture-icon {
+            font-size: 50px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .culture-item h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+        
+        /* 服务流程样式 */
+        .process {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+        
+        .process-steps {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--primary-color);
+            z-index: 1;
+        }
+        
+        .process-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 40px;
+        }
+        
+        .step-number {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .step-content {
+            background: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            max-width: 300px;
+        }
+        
+        .step-content h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+        
+        /* 通栏广告样式 */
+        .ad-banner {
+            padding: 60px 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            text-align: center;
+        }
+        
+        .ad-banner h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        
+        .ad-banner p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        /* 联系我们样式 */
+        .contact {
+            padding: 80px 0;
+        }
+        
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-info h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+        
+        .contact-details {
+            list-style: none;
+        }
+        
+        .contact-details li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-details i {
+            margin-right: 10px;
+            color: var(--primary-color);
+            width: 20px;
+        }
+        
+        .contact-map {
+            flex: 1;
+            min-width: 300px;
+            height: 300px;
+            background: #eee;
+            border-radius: var(--border-radius);
+        }
+        
+        /* 友情链接样式 */
+        .links {
+            padding: 40px 0;
+            background-color: var(--light-color);
+        }
+        
+        .links-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .links-grid a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: var(--transition);
+            padding: 5px 10px;
+        }
+        
+        .links-grid a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* 页脚样式 */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-about {
+            flex: 2;
+            min-width: 300px;
+        }
+        
+        .footer-about h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .footer-contact {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .footer-contact h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .footer-contact p {
+            margin-bottom: 10px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 992px) {
+            .partners-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .news-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .culture-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .process-steps::before {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                transform: translateY(-150%);
+                transition: var(--transition);
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+            }
+            
+            .nav-links li {
+                margin: 10px 0;
+            }
+            
+            .service-text {
+                max-width: 100%;
+            }
+            
+            .partners-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .culture-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section-title h2 {
+                font-size: 28px;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .partners-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">红舟设计工作室</div>
+                <button class="mobile-menu-btn">☰</button>
+                <ul class="nav-links">
+                    <li><a href="#home">网站首页</a></li>
+                    <li><a href="#about">企业简介</a></li>
+                    <li><a href="#services">服务范围</a></li>
+                    <li><a href="#portfolio">成功案例</a></li>
+                    <li><a href="#partners">合作伙伴</a></li>
+                    <li><a href="#news">新闻资讯</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner" id="home">
+        <div class="banner-slides">
+            <div class="banner-slide active" style="background-image: url('https://img.shunking.cn/028vi/style/images/img/1-2001091210550-L.jpg')"></div>
+            <div class="banner-slide" style="background-image: url('https://img.shunking.cn/028vi/style/images/img/1-2001091210400-L.jpg')"></div>
+            <div class="banner-slide" style="background-image: url('https://img.shunking.cn/028vi/style/images/img/1-2001091210180-L.jpg')"></div>
+        </div>
+        <div class="banner-controls">
+            <button class="banner-prev">❮</button>
+            <button class="banner-next">❯</button>
+        </div>
+    </section>
+
+    <!-- 企业简介 -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>企业简介</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>红舟设计工作室是成都舜王科技有限公司旗下专业设计服务团队，立足于成都这座充满创意与活力的城市。我们汇聚了一批富有激情与创造力的设计师，致力于为客户提供全方位的视觉设计解决方案。</p>
+                    <p>工作室秉承"设计创造价值"的理念，将品牌文化与市场需求有机结合，通过专业的设计语言传达品牌核心价值。我们深知每个品牌都有其独特的故事和定位，因此我们注重与客户的深度沟通，理解其行业特性与目标受众，从而创作出能够引起共鸣的视觉作品。</p>
+                    <p>在多年的发展过程中，我们服务了众多不同行业的企业和机构，积累了丰富的设计经验。从品牌策划到视觉设计，从传统印刷品到数字媒体，我们提供一站式的设计服务，帮助客户在竞争激烈的市场中建立独特的品牌形象。</p>
+                    <p>我们相信优秀的设计不仅是视觉上的美感，更是商业策略的有效传达。因此，我们始终将客户的目标放在首位，通过创意设计与专业执行，助力客户实现品牌价值的最大化。</p>
+                </div>
+                <div class="about-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">🎯</div>
+                        <h3>精准定位</h3>
+                        <p>深入分析行业与受众，精准把握品牌定位</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">💡</div>
+                        <h3>创意设计</h3>
+                        <p>融合创新思维与专业技法，打造独特视觉体验</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">⚡</div>
+                        <h3>高效执行</h3>
+                        <p>严谨的工作流程，确保项目按时高质量交付</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🤝</div>
+                        <h3>全程服务</h3>
+                        <p>从策略到执行，提供一站式设计解决方案</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务范围 -->
+    <section class="services" id="services">
+        <div class="service-item">
+            <div class="service-bg" style="background-image: url('https://img.shunking.cn/028vi/style/images/img/s3.jpg')"></div>
+            <div class="service-content">
+                <div class="service-text right">
+                    <h3>品牌策划与设计</h3>
+                    <p>以策略为先导，为品牌成长与销售助力。根据每个品牌的行业特性，消费群体特点，创作并打造最能引起消费者共鸣的品牌形象，创意设计独特定制，达到行业竞争中的脱颖而出。达到品牌的营销力量。</p>
+                    <ul class="service-list">
+                        <li>品牌LOGO设计</li>
+                        <li>品牌VIS设计</li>
+                        <li>品牌故事塑造</li>
+                        <li>品牌形象营销推广</li>
+                        <li>现有品牌形象优化/升级/重塑</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="service-item">
+            <div class="service-bg" style="background-image: url('https://img.shunking.cn/028vi/style/images/img/s4.jpg')"></div>
+            <div class="service-content">
+                <div class="service-text dark">
+                    <h3>画册&包装设计</h3>
+                    <p>每个企业的产品是公司的第一要素，产品包装则是展示品牌产品实力的最好视觉体验，优良的画册与包装设计，是配合品牌VI形象的组合体。</p>
+                    <ul class="service-list">
+                        <li>品牌画册设计</li>
+                        <li>产品画册设计</li>
+                        <li>品牌推广画册设计</li>
+                        <li>产品包装设计</li>
+                        <li>品牌PPT设计</li>
+                        <li>杂志设计定制</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="service-item">
+            <div class="service-bg" style="background-image: url('https://img.shunking.cn/028vi/style/images/img/d1.jpg')"></div>
+            <div class="service-content">
+                <div class="service-text right">
+                    <h3>宣传&会展</h3>
+                    <p>企业的宣传中，大多都离不开物料宣传设计，从视觉引导消费注意，增加品牌含金量，展现企业或产品的产品力。</p>
+                    <ul class="service-list">
+                        <li>单页/折页设计</li>
+                        <li>名片/海报设计</li>
+                        <li>户外广告设计</li>
+                        <li>文化墙/展板设计</li>
+                        <li>广告策划/宣传推广</li>
+                        <li>易拉宝设计</li>
+                        <li>印刷制作服务</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="service-item">
+            <div class="service-bg" style="background-image: url('https://img.shunking.cn/028vi/style/images/img/d3.jpg')"></div>
+            <div class="service-content">
+                <div class="service-text dark">
+                    <h3>网站电商&用户界面</h3>
+                    <p>从线上到线下，从网站到平面到户外广告再到移动端，多位一体打造品牌视觉设计，打造品牌营销O2O模式，给企业的品牌形象打造行业优秀的品牌竞争力。</p>
+                    <ul class="service-list">
+                        <li>网站建设/网站排名优化</li>
+                        <li>网站广告设计</li>
+                        <li>线上运营设计</li>
+                        <li>UI设计、公众号建设</li>
+                        <li>微商广告宣传设计</li>
+                        <li>电商宣传设计</li>
+                        <li>产品详情页设计</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 成功案例 -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>成功案例</h2>
+            </div>
+            <div class="portfolio-grid">
+                <!-- 案例项目将通过JavaScript动态添加 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 合作伙伴 -->
+    <section class="partners" id="partners">
+        <div class="container">
+            <div class="section-title">
+                <h2>合作伙伴</h2>
+            </div>
+            <div class="partners-grid">
+                <!-- 合作伙伴将通过JavaScript动态添加 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 新闻资讯 -->
+    <section class="news" id="news">
+        <div class="container">
+            <div class="section-title">
+                <h2>新闻资讯</h2>
+            </div>
+            <div class="news-grid">
+                <!-- 新闻将通过JavaScript动态添加 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 企业文化 -->
+    <section class="culture">
+        <div class="container">
+            <div class="section-title">
+                <h2>企业文化</h2>
+            </div>
+            <div class="culture-grid">
+                <div class="culture-item">
+                    <div class="culture-icon">💬</div>
+                    <h3>沟通</h3>
+                    <p>我们用真诚的态度，与每一位顾客思想交流碰撞，力求最大化达到客户的创意需求。</p>
+                </div>
+                <div class="culture-item">
+                    <div class="culture-icon">✨</div>
+                    <h3>创新</h3>
+                    <p>根据客户的沟通意向，用我们专业的行业水平，力求为每位顾客做创意视觉的设计。</p>
+                </div>
+                <div class="culture-item">
+                    <div class="culture-icon">🤝</div>
+                    <h3>共赢</h3>
+                    <p>力求服务好每位顾客为客户做好的设计服务，同时得到顾客与行业人认可与共赢。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 通栏广告 -->
+    <section class="ad-banner">
+        <div class="container">
+            <h2>我们是国内一家年轻设计师团队</h2>
+            <p>将品牌文化、产品销售以及市场三者有机结合，为客户提供实效、创新的品牌解决方案，并最终协助客户达成预期的文化诉求与商业目标。</p>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>联系我们</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>联系方式</h3>
+                    <ul class="contact-details">
+                        <li><i>📞</i> 业务专线：400-999-0004</li>
+                        <li><i>📞</i> 办公电话：028-84721238</li>
+                        <li><i>📱</i> 业务经理：13550253625</li>
+                        <li><i>📱</i> 售后专线：18228632563</li>
+                        <li><i>📍</i> 办公地址：成都市青羊区顺城大街248号（世界贸易中心B座15层）</li>
+                        <li><i>✉️</i> 邮箱：chengdu@shunking.cn</li>
+                    </ul>
+                </div>
+                <div class="contact-map">
+                    <!-- 这里可以放置地图 -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 友情链接 -->
+    <section class="links">
+        <div class="container">
+            <div class="links-grid">
+                <!-- 友情链接将通过JavaScript动态添加 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>红舟设计工作室</h3>
+                    <p>与我们合作，您将会得到更成熟的品牌建设服务。我们以客户至上，同时也相互挑战，力求呈现最好的品牌建设成果！</p>
+                </div>
+                <div class="footer-contact">
+                    <h3>联系我们</h3>
+                    <p>业务专线：400-999-0004</p>
+                    <p>售后专线：18228632563</p>
+                    <p>地址：四川省成都市青羊区顺城大街248号（世界贸易中心B座15层）</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>增值电信业务运营牌照：川B2-20240767号 / 蜀ICP备16023211号 / 川作登字-2019-F-00037252 / 川公网安备 51010802000011号 / 川工商网备 51010820160425082720号</p>
+                <p>© 成都舜王科技有限公司综合业务部 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 随机生成主色调
+        const colors = ['#e74c3c', '#3498db', '#9b59b6', '#1abc9c', '#e67e22', '#2ecc71'];
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        document.documentElement.style.setProperty('--primary-color', randomColor);
+        
+        // 移动端菜单切换
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Banner幻灯片
+        const bannerSlides = document.querySelectorAll('.banner-slide');
+        const prevBtn = document.querySelector('.banner-prev');
+        const nextBtn = document.querySelector('.banner-next');
+        let currentSlide = 0;
+        
+        function showSlide(index) {
+            bannerSlides.forEach(slide => slide.classList.remove('active'));
+            bannerSlides[index].classList.add('active');
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % bannerSlides.length;
+            showSlide(currentSlide);
+        }
+        
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + bannerSlides.length) % bannerSlides.length;
+            showSlide(currentSlide);
+        }
+        
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+        
+        // 自动播放
+        let slideInterval = setInterval(nextSlide, 5000);
+        
+        // 鼠标悬停时暂停自动播放
+        const banner = document.querySelector('.banner');
+        banner.addEventListener('mouseenter', () => {
+            clearInterval(slideInterval);
+        });
+        
+        banner.addEventListener('mouseleave', () => {
+            slideInterval = setInterval(nextSlide, 5000);
+        });
+        
+        // 成功案例数据
+        const portfolioItems = [
+            { title: '筑邦建筑三折页设计', image: 'https://img.shunking.cn/028vi/d/file/261bcd7870405d1d146180601a852d48.png' },
+            { title: 'ACURA外贸三折页设计', image: 'https://img.shunking.cn/028vi/d/file/338a0a24044330b0cd2b419491dd5df9.png' },
+            { title: '睿强动力LOGO设计', image: 'https://img.shunking.cn/028vi/d/file/563e77ca687336f8cd9e86f11522ff7a.png' },
+            { title: '科创高地·锦绣郫都PPT设计', image: 'https://img.shunking.cn/028vi/d/file/9f64cad85960c3beeb9a64e81b23a7f1.png' },
+            { title: '岚元伯泽LOGO设计', image: 'https://img.shunking.cn/028vi/d/file/9e45ad81e7e6e1bc0ef9aacf86249b13.png' },
+            { title: '中云数智PPT设计', image: 'https://img.shunking.cn/028vi/d/file/c15d6dc9ce84d8c0ca0c2d6678730fcd.png' },
+            { title: '高新快充LOGO设计', image: 'https://img.shunking.cn/028vi/d/file/f40b926ad46394e88ea1e40f7d95ce1b.png' },
+            { title: '和乐门业画册', image: 'https://img.shunking.cn/028vi/d/file/005881088dadc318a91b41dd2bc9d40b.png' },
+            { title: '智优普画册', image: 'https://img.shunking.cn/028vi/d/file/826a2a2d11352516556c36889abfdcd7.png' },
+            { title: '领硕智谷（成都）画册', image: 'https://img.shunking.cn/028vi/d/file/c0e4584d505a4f5501b8fdc0ec81c79a.png' },
+            { title: '中民美好四折页', image: 'https://img.shunking.cn/028vi/d/file/bd79f560415250827fe2a2d3b2d9684c.png' },
+            { title: '钦天导航无人机PPT设计', image: 'https://img.shunking.cn/028vi/d/file/e18e8ec36a1d33d0fd4d4118fb0d0125.png' }
+        ];
+        
+        // 渲染成功案例
+        const portfolioGrid = document.querySelector('.portfolio-grid');
+        portfolioItems.forEach(item => {
+            const portfolioItem = document.createElement('div');
+            portfolioItem.className = 'portfolio-item';
+            portfolioItem.innerHTML = `
+                <img src="${item.image}" alt="${item.title}" class="portfolio-img">
+                <div class="portfolio-overlay">
+                    <h4>${item.title}</h4>
+                </div>
+            `;
+            portfolioGrid.appendChild(portfolioItem);
+        });
+        
+        // 合作伙伴数据
+        const partners = [
+            { name: '电子科技大学', logo: 'http://img8.dfco.cn/xhsz/8f1bde6de1c6be6b.jpg' },
+            { name: '西北工业大学', logo: 'http://img8.dfco.cn/xhsz/52aefb958512cd53.jpg' },
+            { name: '中国石油大学', logo: 'http://img8.dfco.cn/xhsz/9fc285545e331683.jpg' },
+            { name: '舜王科技', logo: 'http://img8.dfco.cn/xhsz/76fb1cd708412e9a.jpg' },
+            { name: '成都大学', logo: 'http://img8.dfco.cn/xhsz/6334ff6cf2c590b6.jpg' },
+            { name: '重庆大学', logo: 'http://img8.dfco.cn/xhsz/621c5859e34e2a64.jpg' },
+            { name: '成都理工大学', logo: 'http://img8.dfco.cn/xhsz/43fdd675e820a610.jpg' },
+            { name: '西安邮电大学', logo: 'http://img8.dfco.cn/xhsz/664b029f8849cd04.jpg' },
+            { name: '太原理工大学', logo: 'http://img8.dfco.cn/xhsz/8d5f90eb90b03718.jpg' },
+            { name: '南京理工大学', logo: 'http://img8.dfco.cn/xhsz/f7e4d81bc2598e2c.jpg' }
+        ];
+        
+        // 渲染合作伙伴
+        const partnersGrid = document.querySelector('.partners-grid');
+        partners.forEach(partner => {
+            const partnerItem = document.createElement('div');
+            partnerItem.className = 'partner-item';
+            partnerItem.innerHTML = `<img src="${partner.logo}" alt="${partner.name}" class="partner-logo">`;
+            partnersGrid.appendChild(partnerItem);
+        });
+        
+        // 新闻数据
+        const newsItems = [
+            { category: '工作室新闻', title: '12月红舟工作室乔迁，新的环境新的征程！', image: 'https://img.shunking.cn/028vi/d/file/7716b47b141ad0c480c9d2ad69613c91.png' },
+            { category: '工作室新闻', title: '舜王公司对我部门重点项目进行督查调研', image: 'https://img.shunking.cn/028vi/d/file/136187de2cf205a0a67b9e8cb29e89ec.jpg' },
+            { category: '工作室新闻', title: '怎么找一家专业宣传册设计公司', image: 'https://img.shunking.cn/028vi/d/file/d3c9aeb744258fa70c71870d78b4f244.jpg' },
+            { category: '工作室新闻', title: '宣传册设计的流程是什么', image: 'https://img.shunking.cn/028vi/d/file/f2b24eb06a0af47d586ec1c385035cd8.jpg' },
+            { category: '设计风向标', title: '扎克伯格有点头疼！Facebook究竟抄袭了多少个LOGO？', image: 'https://img.shunking.cn/028vi/d/file/de4a443b49b9f2654cefe183cee6fabd.jpg' },
+            { category: '设计风向标', title: '雪碧不仅推出新包装，还换上了新LOGO', image: 'https://img.shunking.cn/028vi/d/file/be98779dedfbacd16c2170631c78aaa3.jpg' },
+            { category: '设计风向标', title: '顺丰集团推出"顺丰快运"品牌，全新LOGO亮相', image: 'https://img.shunking.cn/028vi/d/file/a60183aa8141018ddff9ec283777201e.jpg' },
+            { category: '设计风向标', title: '北京2022年冬奥会和冬残奥会吉祥物亮相！', image: 'https://img.shunking.cn/028vi/d/file/96e9c4ac7fe03c26147d1507c752fb7b.jpg' },
+            { category: '常见小问题', title: '一条实线62万人违章 标志标线设计合理吗?', image: 'https://img.shunking.cn/028vi/d/file/0d11687f2b946ef7fd88b72266754ffb.jpg' },
+            { category: '常见小问题', title: 'LOGO自动生成，设计师饭碗难保？', image: 'https://img.shunking.cn/028vi/d/file/2551cf1177832ee8f2c574411d5d5cc4.jpg' },
+            { category: '常见小问题', title: '怎样才能做好一个标志?', image: 'https://img.shunking.cn/028vi/d/file/65f0fb8633c940d2bdc35ebcbe9d4a11.jpg' },
+            { category: '常见小问题', title: '10个理由告诉你，为什么插画在UI设计中这么火', image: 'https://img.shunking.cn/028vi/d/file/3f1e672634754b9ed0a784d50ded3748.jpg' }
+        ];
+        
+        // 随机排序新闻
+        newsItems.sort(() => Math.random() - 0.5);
+        
+        // 渲染新闻
+        const newsGrid = document.querySelector('.news-grid');
+        newsItems.forEach(news => {
+            const newsItem = document.createElement('div');
+            newsItem.className = 'news-item';
+            newsItem.innerHTML = `
+                <img src="${news.image}" alt="${news.title}" class="news-img">
+                <div class="news-content">
+                    <div class="news-meta">${news.category}</div>
+                    <h3 class="news-title">${news.title}</h3>
+                </div>
+            `;
+            newsGrid.appendChild(newsItem);
+        });
+        
+        // 友情链接数据
+        const links = [
+            { text: '成都画册设计', url: 'http://cdswgg01.ncoe.cn/' },
+            { text: '成都高端宣传册', url: 'http://cdswgg02.ncoe.cn/' },
+            { text: '成都门头招牌', url: 'http://cdswgg03.ncoe.cn/' },
+            { text: '成都企业画册', url: 'http://cdswgg04.ncoe.cn/' },
+            { text: '成都发光字', url: 'http://cdswgg05.ncoe.cn/' },
+            { text: '成都名片印刷', url: 'http://cdswgg06.ncoe.cn/' },
+            { text: '成都灯箱制作', url: 'http://cdswgg07.ncoe.cn/' },
+            { text: '成都广告公司', url: 'http://cdswgg08.ncoe.cn/' },
+            { text: '成都标识标牌', url: 'http://cdswgg09.ncoe.cn/' },
+            { text: '成都广告制作', url: 'http://cdswgg10.ncoe.cn/' },
+            { text: '成都广告设计', url: 'http://cdswgg11.ncoe.cn/' },
+            { text: '成都宣传册制作', url: 'http://cdswgg12.ncoe.cn/' },
+            { text: '沛县广告公司', url: 'http://xzsyggaz.ncoe.cn/' },
+            { text: '沛县广告安装', url: 'http://pxsyggaz.ncoe.cn/' },
+            { text: '沛县发光字', url: 'http://pxsyggzz.ncoe.cn/' }
+        ];
+        
+        // 随机排序友情链接
+        links.sort(() => Math.random() - 0.5);
+        
+        // 渲染友情链接
+        const linksGrid = document.querySelector('.links-grid');
+        links.forEach(link => {
+            const linkElement = document.createElement('a');
+            linkElement.href = link.url;
+            linkElement.target = '_blank';
+            linkElement.textContent = link.text;
+            linksGrid.appendChild(linkElement);
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // 移动端点击后关闭菜单
+                    if(window.innerWidth <= 768) {
+                        navLinks.classList.remove('active');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
